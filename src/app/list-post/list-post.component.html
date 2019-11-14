@@ -1,0 +1,14 @@
+<!-- <div>
+    <li class="list-group-item">
+        <h4>Post Title : {{ postName }}</h4> <hr>
+        <p>Content : {{ postContent }} </p>
+        <button class="btn btn-success">Love It</button>  <button class="btn btn-danger">Don't love it !</button>
+    </li>
+</div> -->
+
+
+<app-list-post-item  *ngFor="let post of posts"
+                        [postName]="post.name"
+                        [postContent]="post.content"
+                        [postLoveIts]="post.loveIts"
+                        [postDate]="post.created_at"></app-list-post-item>
